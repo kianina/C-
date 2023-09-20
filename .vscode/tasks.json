@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe 生成活动文件",
-            "command": "D:\\IDE_sources\\QT4\\Tools\\mingw730_32\\bin\\g++.exe",
+            "command": "E:\\IDE-soursers\\QT\\Tools\\mingw1120_64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",

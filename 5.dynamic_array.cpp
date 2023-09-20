@@ -5,7 +5,11 @@ using namespace std;
 
 /*
 1.new和数组
+2.动态数组
+3.智能指针和动态数组
 */
+
+
 //1.为对象分配内存
 class Box
 {

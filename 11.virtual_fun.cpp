@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+// 虚函数
 class Base
 {
     public:

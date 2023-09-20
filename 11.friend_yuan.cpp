@@ -1,9 +1,12 @@
 #include<iostream>
 #include<string>
 using namespace std;
+
+
+
 class building
 {
-	/*友元访问私有变量*/
+	/*友元访问私有变量*/ // 声明友元函数
 	friend void fun(building* build);
 public:
 	building()

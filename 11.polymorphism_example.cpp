@@ -2,6 +2,9 @@
 using namespace std;
 
 
+// 多态
+
+
 /*抽象的计算器基类*/
 class calcultor
 {
@@ -13,6 +16,8 @@ public:
 	int A;
 	int B;
 };
+
+
 /*加法计算器*/
 class Addcalcultor:public calcultor
 {

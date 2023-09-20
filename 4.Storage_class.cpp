@@ -8,7 +8,6 @@
 
 // 函数声明 
 void func(void);
-
 static int count = 10; /* 全局变量 */
 
 int main()
@@ -19,6 +18,7 @@ int main()
     }
     return 0;
 }
+
 // 函数定义
 void func(void)
 {

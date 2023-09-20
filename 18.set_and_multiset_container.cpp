@@ -9,6 +9,8 @@ using namespace std;
 3.pair:组
 4.set容器的操作
 */
+
+
 void  PrintSet(set<int>& s) {
 	for (set<int>::iterator it = s.begin(); it != s.end(); it++) {
 		cout << *it << " ";
@@ -23,6 +25,7 @@ void PrintMultiSet(multiset<int>& ms)
 	}
 	cout << endl;
 }
+
 void test1()
 {
 	set<int>s;
@@ -50,6 +53,7 @@ void test2()
 		cout << "volumns:" << s1.size() << endl;
 	}
 }
+
 void test4()
 {
 	set<int>s2;
@@ -106,6 +110,7 @@ void test5()
 	//对于set而言 统计结果 0 或 1，因为无重复
 	cout << num << "a" << endl;
 }
+
 void test6()
 {
 	set<int>s1;
@@ -128,7 +133,7 @@ void test6()
 	{
 		cout << "fail insert" << endl;
 	}
-	multiset<int>ms;
+	multiset<int> ms;
 	ms.insert(10);
 	ms.insert(10);
 	PrintMultiSet(ms);
@@ -141,6 +146,7 @@ void test7() {
 	pair<string, int>p1 = make_pair("jerry", 12);
 	cout << p1.first << p1.second << endl;
 }
+
 /*set容器的指定排序*/
 class MyCompare
 {
@@ -202,8 +208,11 @@ void test9()
 		cout << it->m_Name << " " << it->m_Age << endl;
 	}
 }
+
+
+
 int main() 
 {
-	test9();
+	test6();
 	return 0;
 }

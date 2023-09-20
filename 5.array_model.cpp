@@ -1,6 +1,8 @@
 #include<iostream>
 #include<time.h>
 using namespace std;
+
+
 /*
 1.数组
 2.多维数组
@@ -10,7 +12,7 @@ using namespace std;
 //常用运算符
 void func()
 {
-//1.sizeof ;返回变量的大小
+	//1.sizeof ;返回变量的大小
 	int a = 10;
 	int X = 1;
 	int Y = 2;

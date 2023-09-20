@@ -15,6 +15,7 @@ void test()
 {
 	son s;
 }
+
 template <class T1,class T2>
 class son1 :public base<T2>
 {

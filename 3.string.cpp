@@ -4,10 +4,21 @@
 #include<algorithm>
 using namespace std;
 
+
+/*
+1.string初始化
+2.拼接字符串
+3.字符串的查找和替换
+4.字符串比较
+5.string字符存取
+6.字符串 插入和删除
+7.string求字串,拷贝字符串
+*/
+
 //string的构造函数
 void test01()
 {
-	string s1;//默认构造
+	string s1; //默认构造
 	const char* str = "hellow world";
 	string s2(str);
 	cout << "s2：" << s2 << endl;

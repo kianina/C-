@@ -6,7 +6,8 @@ using namespace std;
 2.变量的定义
 */
 
-// 变量声明,函数声明同理
+
+// 变量声明,函数声明同理(告诉变量定义在别处)
 extern int a, b;
 extern int c;
 extern float f;

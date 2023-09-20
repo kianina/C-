@@ -10,6 +10,13 @@ using namespace std;
 using std::setw;
 
 
+/*
+1.数组
+1.1-指向数组的指针
+1-2-传递数组给函数
+1-3-从函数返回数组
+*/
+
 
 double getAverage(int arr[], int size);
 int* getRandom();
@@ -17,19 +24,20 @@ int* getRandom();
 //1.数组
 void fun()
 {
-//1.数学运算
+	//1.数学运算
 	// 数字定义
 	short  s = 10;
 	int    i = -1000;
 	long   l = 100000;
 	float  f = 230.47;
 	double d = 200.374;
+
 	// 数学运算
 	cout << "sin(d) :" << sin(d) << endl;
 	cout << "abs(i)  :" << abs(i) << endl;
 	cout << "floor(d) :" << floor(d) << endl;
 	cout << "sqrt(f) :" << sqrt(f) << endl;
-	cout << "pow( d, 2) :" << pow(d, 2) << endl;
+	cout << "pow(d, 2) :" << pow(d, 2) << endl;
 
 	//2.随机数
 	int i1, j1;
@@ -40,7 +48,6 @@ void fun()
 		j1 = rand();
 		cout << "随机数：" << j1 << endl;
 	}
-
 
 	//3.数组
 	int n[10]; // n 是一个包含 10 个整数的数组
@@ -65,13 +72,13 @@ void fun()
 			cout << a[i][j] << endl;
 		}
 
-	//5.指向数组的指针
+	// 5.指向数组的指针
 	// 带有 5 个元素的整型数组
 	double balance[5] = { 1000.0, 2.0, 3.4, 17.0, 50.0 };
 	double* p;
 	p = balance;
 	// 输出数组中每个元素的值
-	//输出banlance[0]的地址
+	// 输出banlance[0]的地址
 	cout << &p << endl;
 	cout << "使用指针的数组值 " << endl;
 	for (int i = 0; i < 5; i++)
@@ -86,7 +93,7 @@ void fun()
 		cout << *(balance + i) << endl;
 	}
 
-	//6.传递数组给函数
+	// 6.传递数组给函数
 	int bal[5] = { 1000, 2, 3, 17, 50 };
 	double avg;
 	// 传递一个指向数组的指针作为参数
@@ -94,7 +101,7 @@ void fun()
 	// 输出返回值
 	cout << "平均值是：" << avg << endl;
 
-	//7.从函数返回数组
+	// 7.从函数返回数组
 	// 一个指向整数的指针
 	int* plt;
 	plt = getRandom();
@@ -104,7 +111,7 @@ void fun()
 		cout << *(plt + i) << endl;
 	}
 
-	//8.初始化字符串
+	// 8.初始化字符串
 	char greeting[] = "hello";
 	char greeting1[6]= { 'H', 'e', 'l', 'l', 'o', '\0' };
 	cout << "Greeting message: ";
@@ -126,7 +133,7 @@ void fun()
 	len = strlen(str1);
 	cout << "strlen(str1) : " << len << endl;
 
-	//10.c++中的string类
+	// 10.c++中的string类
 	string str11 = "Hello";
 	string str21 = "World";
 	string str31;

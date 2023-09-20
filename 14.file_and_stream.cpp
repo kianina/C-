@@ -9,38 +9,51 @@ using namespace std;
 
 
 /*
-1.IO类
-2.文件的输入和输出
-3.string类
+1-文件的输入输出
+2-文件的读写
+3-判断文件是否被打开
+4-向文件中追加内容
+5-操作元
+6-流作为函数的实参
+7-eof成员函数判断是否为最后一个字符
 */
+
+
 struct PersonInfo{
     string name;
     vector<string> phones;
 };
 
 
-//2.文件的输入和输出
+// 1.文件的输入和输出
 void file_io()
 {
     char data[100];
+    
     // 以写模式打开文件
     ofstream outfile;
     outfile.open("afile.dat");
+
     cout << "Writing to the file" << endl;
     cout << "Enter your name: ";
     cin.getline(data, 100);
+
     // 向文件写入用户输入的数据
     outfile << data << endl;
+
     cout << "Enter your age: ";
     cin >> data;
     cin.ignore();
+
     // 再次向文件写入用户输入的数据
     outfile << data << endl;
     // 关闭打开的文件
     outfile.close();
+
     // 以读模式打开文件
     ifstream infile;
-    infile.open("afile.dat");
+    infile.open("afile.dat", ios::in);
+    
     cout << "Reading from the file" << endl;
     infile >> data;
     // 在屏幕上写入数据
@@ -51,28 +64,36 @@ void file_io()
     // 关闭打开的文件
     infile.close();
 }
-//读写文件
+
+// 2.读写文件
 void file_ios()
 {
     ifstream inStream;
     ofstream outStream;
     inStream.open("afile.dat");
     outStream.open("outfile.dat");
-    char first,second,thrid;
-    inStream>>first>>second>>thrid; //将文件中的内容以char类型读出
-    cout<<first<<" "<<second<<" "<<thrid<<endl; //将从文件中读出的内容输出到命令行
+
+    char first, second, thrid;
+    // 将文件中的内容以char类型读出
+    inStream>>first>>second>>thrid; 
+    cout<<first<<" "<<second<<" "<<thrid<<endl; 
+
+    // 以流的方式写文件
     outStream<<"the sum of the first 3\n"
              <<"numbers in infile.dat\n"
              <<"is"<<(first+second+thrid)<<endl;
+
     inStream.close();
     outStream.close();
 }
 
-//查看IO是open是否成功被调用
+// 3.查看IO是open是否成功被调用
 void io_func1()
 {
     ifstream inStream;
     ofstream outStream;
+
+    // 判断文件是否被打开
     inStream.open("infile.dat");
     if(inStream.fail()) //成功打开文件是fail方法会返回flase
     {
@@ -85,6 +106,7 @@ void io_func1()
         cout<<"open outfile.dat is fail"<<endl;
         exit(1);
     }
+
     char first,second,thrid;
     inStream>>first>>second>>thrid; //将文件中的内容以char类型读出
     cout<<first<<" "<<second<<" "<<thrid<<endl; //将从文件中读出的内容输出到命令行
@@ -95,7 +117,7 @@ void io_func1()
     outStream.close();
 }
 
-//向已经存在的文件中追加内容
+// 4.向已经存在的文件中追加内容
 void io_func2()
 {
     ofstream outStream;
@@ -111,15 +133,15 @@ void io_func2()
     outStream.close();
 }
 
-//操作元
+// 5.操作元
 void io_func3()
 {
+    // stew进行空格
     cout<<"hello"<<setw(4)<<10<<setw(6)<<20<<setw(8)<<30;
 }
 
-//流作为函数的实参
-void makeNeat(ifstream& messyFile,ofstream& neatFile,
-              int number,int fieldWidth)
+// 6.流作为函数的实参
+void makeNeat(ifstream& messyFile, ofstream& neatFile, int number, int fieldWidth)
 {
     neatFile.setf(ios::fixed);
     neatFile.setf(ios::showpoint); //显示小数点
@@ -136,7 +158,6 @@ void makeNeat(ifstream& messyFile,ofstream& neatFile,
         neatFile<<setw(fieldWidth)<<next<<endl;
     }
 }
-
 void io_func4()
 {
     ifstream fin;
@@ -159,7 +180,7 @@ void io_func4()
     cout<<"end of program"<<endl;
 }
 
-//eof成员函数
+// 7.eof成员函数判断是否为最后一个字符
 void io_func5()
 {
     ifstream inStream;
@@ -172,8 +193,11 @@ void io_func5()
         inStream.get(next);
     }
 }
+
+// 8.read()和write()
+
 int main()
 {
-    io_func5();
+    io_func3();
     return 0;
 }

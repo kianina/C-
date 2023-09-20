@@ -22,7 +22,7 @@ void swap_ying(int& x, int& y);
 //1.函数
 void func()
 {
-		//1.函数定义
+	//1.函数定义
 	int c;
 	c = max(3, 6);
 	cout << c << endl;

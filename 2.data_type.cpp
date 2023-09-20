@@ -7,13 +7,15 @@ using namespace std;
 3.枚举类型
 */
 
+
 void type_change()
 {
 	unsigned a = -1;
-	int b=10;
+	int b = 10;
 	cout<<a<<endl;
 	cout<<a+b<<endl;
 }
+
 //2.数据类型
 void data_type()
 {
@@ -35,15 +37,14 @@ void enum_type()
 	feet a = 10;
 	cout << a << endl;
 	//1.枚举类型
-	enum color {red,green=6,blue} c; //默认red=0,blue=2
+	enum color {red, green = 6, blue} c; //默认red = 0, blue=2
 	c = green;
 	cout << c << endl;
 }
 
 int main()
 {
-	type_change();
-	data_type();
+	enum_type();
 	return 0;
 }
 

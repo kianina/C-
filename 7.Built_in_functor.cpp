@@ -4,27 +4,33 @@
 #include<algorithm>
 using namespace std;
 
+
+/*
+1.仿函数
+*/
+
 void test1()
 {
-	negate<int>n;
+	negate<int> n;
 	cout << n(50) << endl;
 }
+
 //加法仿函数
 void test2()
 {
-	plus<int>p;
+	plus<int> p;
 	cout << p(12, 3) << endl;
 }
 /*关系仿函数*/
 void test3()
 {
-	vector<int>v;
+	vector<int> v;
 	v.push_back(1);
 	v.push_back(3);
 	v.push_back(4);
 	v.push_back(2);
 	v.push_back(5);
-	sort(v.begin(), v.end(), greater<int>());
+	sort(v.begin(), v.end(),  greater<int>());
 	for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
 		cout << *it << " ";
 	}

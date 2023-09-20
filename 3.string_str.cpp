@@ -8,9 +8,9 @@ using namespace std;
 #define NEWLINE '\n'
 
 /*
-1.字符串
-2.vector容器
-3.迭代器
+1.字符串作业题
+2.vector容器初始
+3.迭代器初始
 */
 void func()
 {
@@ -28,7 +28,7 @@ void func()
 	area1 = LENGTH * WIDTH1;
 	cout << area1;
 	cout << NEWLINE1;
-	//4.修饰符类型
+	// 4.修饰符类型
 	short int i; //短整型
 	short unsigned int j; //无符号短整型
 	j = 50000;
@@ -36,7 +36,7 @@ void func()
 	cout << i << " " << j;
 }
 
-//字符串的声明
+// 字符串的声明
 void string_str()
 {
 	string str1="hello";
